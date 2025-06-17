@@ -3,8 +3,8 @@ import { check, sleep } from 'k6';
 
 export let options = {
   stages: [
-    { duration: '5m', target: 20 }, // 20 usuários
-    { duration: '5m', target: 30 }, // 30 usuários
+    { duration: '5m', target: 5 }, // 5 usuários
+    { duration: '5m', target: 7 }, // 7 usuários
     { duration: '2m', target: 0 },  // ramp down
   ],
 };
@@ -15,8 +15,8 @@ const urls = [
 ];
 
 const tokens = [
-  '123',
-  '1233'
+  'cmV2ZW5kYSBlbXByZXNhMSBzdGc1RFNDYXJhcGljdWliYQ==',
+  'cmV2ZW5kYSBlbXByZXNhMSBzdGc1RFM='
 ];
 
 export default function () {
