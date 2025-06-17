@@ -34,7 +34,14 @@ cd C:\Users\SeuUsuario\Downloads\teste-desempenho-api-recarga-web-empresa1
 k6 run scripts/teste_tokens_k6.js
 ```
 3. Analise os resultados no arquivo CSV em `resultados/`
-4. Abra `graficos/template_graficos_excel.xlsx` para visualizar gráficos
+4. O que acontece na execução
+O k6 vai simular os usuários, alternando entre os dois tokens e URLs.
+
+A carga vai subir por exemplo 10 usarão token 1 e 10 usarão token 2, todos ao mesmo tempo, gerando a carga simultânea.
+
+O terminal vai mostrar estatísticas em tempo real (tempo de resposta, erros, etc).
+
+5. Abra `graficos/template_graficos_excel.xlsx` para visualizar gráficos
 
 ## Próximos Passos
 - Migrar para ambiente com Docker, InfluxDB e Grafana para dashboards avançados.
